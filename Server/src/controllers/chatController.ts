@@ -62,6 +62,8 @@ export const sendMessage = async (req: AuthRequest, res: Response) => {
       text,
     });
 
+    await Conversation.findByIdAndUpdate(conversationId, { lastMessage: text });
+
     res.status(201).json(message);
   } catch (error) {
     res.status(500).json({ message: "Server error", error });

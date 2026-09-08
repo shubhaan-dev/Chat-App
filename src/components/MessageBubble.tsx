@@ -13,8 +13,8 @@ function MessageBubble({ message, own }: MessageBubbleProps) {
       <div
         className={`px-4 py-2 rounded-2xl max-w-xs ${
           own
-            ? "bg-black text-white"
-            : "bg-white border"
+            ? "bg-blue-600 text-white"
+            : "bg-slate-800 text-gray-100 border border-slate-700"
         }`}
       >
         {message}
